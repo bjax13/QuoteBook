@@ -26,9 +26,11 @@ angular.module("app").service("quoteSrvc",function () {
     return false;
   }
   this.removeQuotes = function (quoteText) {
+    console.log("delete");
     for (var i = 0; i < quotes.length; i++) {
-      if (quotes[i] === quoteText) {
-        quotes.splice(i--,1);
+      if (quotes[i].text.toLowerCase() === quoteText.toLowerCase()) {
+        console.log(quotes[i].text.toLowerCase );
+        quotes.splice(i,1);
       }
     }
   }

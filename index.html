@@ -29,9 +29,10 @@
     <div class="mainQuoteBox">
       <div class="quoteBox">
         {{q.text}} <br> -{{q.author}}
+
       </div>
       <div class="favQuote">
-        <button type="favButton" name="button">Remove Quote</button>
+        <button ng-click="removeQuotes(q.text)">Remove Quote</button>
       </div>
 
     </div>
