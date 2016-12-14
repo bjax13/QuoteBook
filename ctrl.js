@@ -6,7 +6,9 @@ angular.module('app').controller('ctrl', function ($scope,quoteSrvc) {
     $scope.quotes = quoteSrvc.getQuotes();
   }
 
-  getQuotes();
+  $scope.getQuotes();
+
+  $scope.addQuotes = quoteSrvc.addQuotes;
 
 
 })

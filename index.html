@@ -5,9 +5,28 @@
       <link rel="stylesheet" href="style.css"></link>
 </head>
 <body ng-controller="ctrl">
+  <div class="mainQuoteBox">
+    <!-- Need
+      -text input
+      -autor input
+    -->
+    <input type="text" name="quoteInput" value="Write quote here...">
+    <input type="author" name="authorInput" value="Author here...">
+    <button type="submit" name="SubmitButton">Submit new quote</button>
+
+  </div>
+
   <div ng-repeat="q in quotes">
-    {{test}}
-    {{q.text}}
+    <div class="mainQuoteBox mainQuoteBox2">
+      <div class="quoteBox">
+        {{q.text}} <br> -{{q.author}}
+      </div>
+      <div class="favQuote">
+        <button type="favButton" name="button">Fave Button</button>
+      </div>
+
+    </div>
+
 
   </div>
 

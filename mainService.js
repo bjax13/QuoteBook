@@ -10,13 +10,19 @@ angular.module("app").service("quoteSrvc",function () {
   ];
 
   //The service should then allow you to:
-  //get,
+  //get, CHECK
   //add, and
   //remove data
   //from that array via exposed functions.
 
   this.getQuotes= function () {
     return quotes;
+  }
+  this.addQuotes = function (text, author) {
+    quotes.push({
+      text: text,
+      author:author
+    });
   }
 
 
