@@ -10,21 +10,28 @@
       -text input
       -autor input
     -->
-    <input type="text" name="quoteInput" value="Write quote here...">
-    <input type="author" name="authorInput" value="Author here...">
-    <button type="submit" name="SubmitButton">Submit new quote</button>
-    <input type="filter" name="filterInput" value="Search quotes">
-    
+
+    <div class="">
+      <input type="text" name="quoteInput" value="Write quote here...">
+      <input type="author" name="authorInput" value="Author here...">
+      <button type="submit" name="SubmitButton">Add Quote</button>
+    </div>
+
+    <div class="">
+      <span>Search:<input ng-model="searchQuotes"></span>
+    </div>
+
+
 
   </div>
 
-  <div ng-repeat="q in quotes">
-    <div class="mainQuoteBox mainQuoteBox2">
+  <div ng-repeat="q in quotes | filter:searchQuotes">
+    <div class="mainQuoteBox">
       <div class="quoteBox">
         {{q.text}} <br> -{{q.author}}
       </div>
       <div class="favQuote">
-        <button type="favButton" name="button">Fave Button</button>
+        <button type="favButton" name="button">Remove Quote</button>
       </div>
 
     </div>
