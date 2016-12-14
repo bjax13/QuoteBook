@@ -5,8 +5,22 @@
   border-width: 2px;
   border-style: solid;
   padding: 10px;
-  margin: 10px;
+  margin: 0px 0px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.removeQuoteButton{
+  margin-left: 1px;
+  width: 10%;
+
+}
+.quoteBox{
+  width: 90%
+}
+.inputQuotes{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }

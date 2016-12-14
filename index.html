@@ -11,11 +11,17 @@
       -autor input
     -->
 
-    <div class="">
-      <input type="text" name="quoteInput" value="Write quote here...">
-      <input type="author" name="authorInput" value="Author here...">
-      <button type="submit" name="SubmitButton">Add Quote</button>
+    <div class="inputQuotes">
+      <div class="">
+        <span> Quote:<input ng-model="addText" required ></span>
+      </div>
+      <div class="">
+        <span>Author:<input ng-model="addAuthor" required></span>
+      </div>
     </div>
+
+    <button ng-click="addQuotes({text:addText, author:addAuthor})">Add Quote</button>
+
 
     <div class="">
       <span>Search:<input ng-model="searchQuotes"></span>
@@ -31,7 +37,7 @@
         {{q.text}} <br> -{{q.author}}
 
       </div>
-      <div class="favQuote">
+      <div class="removeQuoteButton">
         <button ng-click="removeQuotes(q.text)">Remove Quote</button>
       </div>
 
