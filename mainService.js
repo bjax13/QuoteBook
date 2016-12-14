@@ -18,11 +18,19 @@ angular.module("app").service("quoteSrvc",function () {
   this.getQuotes= function () {
     return quotes;
   }
-  this.addQuotes = function (text, author) {
-    quotes.push({
-      text: text,
-      author:author
-    });
+  this.addQuotes = function (quoteObj) {
+    if (quoteObj.text && quoteObj.author) {
+      quotes.push(quoteObj)
+      return true;
+    }
+    return false;
+  }
+  this.removeQuotes = function (quoteText) {
+    for (var i = 0; i < quotes.length; i++) {
+      if (quotes[i] === quoteText) {
+        quotes.splice(i--,1);
+      }
+    }
   }
 
 
